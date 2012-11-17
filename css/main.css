@@ -1,34 +1,34 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+/* -------------------- BASE STYLES ---------------------*/
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0 none;
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    backround-color: #fff;
+    min-width: 1020px;
+    font: 16px/22px Arial, Helvetica, sans-serif;
+    color: #666666;
 }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
+.wrapper {
+	padding: 10px;
+	margin: 0 auto;
+	width: 1000px;
+}
 
+a {
+	color: #3377bb;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*Highlight Color*/
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -39,260 +39,185 @@ body {
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+a img {
+    text-decoration: none;
 }
 
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
+.clear {
+	clear: both;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+.fl-left {
+	float: left;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
+.fl-right {
+	float: right;
+}
 
 textarea {
-    resize: vertical;
+    resize: none;
 }
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " "; 
+    display: table;
 }
 
 .clearfix:after {
     clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
+/* For IE 6/7 only*/
 .clearfix {
     *zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+/* -------------------- TYPOGRAPHY ---------------------*/
+p {
+	 font: 16px/22px Arial, Helvetica, sans-serif;
+	 color: #666;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
+h1 {
+	font: bold 32px/40px Arial, Helvetica, sans-serif;
+	color: #333;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
+h2 {
+	font: 26px/32px Arial, Helvetica, sans-serif;
+	color: #333;
+}
 
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow:none !important;
-        text-shadow: none !important;
-    }
+h3 {
+	font: 20px/26px Arial, Helvetica, sans-serif;
+	color: #666;
+}
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+/* -------------------- BUTTONS ---------------------*/
+.button {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	height: 30px;
+	cursor: pointer;
+}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+.button input, a.button {
+	height: 20px;
+	position: relative;
+	margin: 0 15px 0 0;
+	background-color: transparent;
+	border: 0;
+	font: 16px/30px Arial, Helvetica,sans-serif;
+	padding: 0 5px 0px 15px;
+	text-decoration: none;
+	text-align: center;
+}
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+.button input {
+	padding: 0 2px 1px 14px;
+	overflow: visible;
+	border-radius:0px; 
+	-moz-border-radius:0px; 
+	-webkit-border-radius:0px; 
+	cursor: pointer;
+	margin: 0;
+}
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
+.button span, .button input, a.button{
+	background-image: url(../img/sprite.png);
+	display: inline-block;
+	height: 30px;
+}
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+.button span {
+	width: 12px;
+	position: absolute;
+	top: 0;
+	right: -12px;
+}
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+a.button.color, .button.color input 	{background-position: 0 0; color: #ffffff; text-shadow: 0 -1px #395716;}
+.button.color span 						{background-position: -788px 0;}
+a.button.grey, .button.grey input 		{background-position: 0 -62px; color: #666666; text-shadow: 0 1px #ffffff;}
+.button.grey span 						{background-position: -788px -62px;}
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+a.button.color:hover, .button.color:hover input 	{background-position: 0 -31px;}
+.button.color:hover span 							{background-position: -788px -31px;}
+a.button.grey:hover, .button.grey:hover input 		{background-position: 0 -93px;}
+.button.grey:hover span 							{background-position: -788px -93px;}
 
-    img {
-        max-width: 100% !important;
-    }
+/* -------------------- FORM ELEMENTS ---------------------*/
+input[type="text"], input[type="file"], input[type="email"], input[type="password"], textarea {
+	background: #ececec; 
+	height:20px; 
+	padding: 4px 6px; 
+	margin:1px 0 0;
+	box-shadow:0 1px 3px #aaaaaa inset, 0 1px #ffffff; 
+	-webkit-box-shadow:0 1px 3px #aaaaaa inset, 0 1px #ffffff; 
+	-moz-box-shadow:0 1px 3px #aaaaaa inset, 0 1px #ffffff;
+	border-radius:4px; 
+	-moz-border-radius:4px; 
+	-webkit-border-radius:4px; 
+	border: none;
+}
 
-    @page {
-        margin: 0.5cm;
-    }
+input[type="text"]:hover, input[type="file"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, input[type="text"]:focus, input[type="file"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, .search-form .text input:focus {
+	background: #f3f3f3; 
+	box-shadow:0 1px 3px #9c9c9c inset; 
+	-webkit-box-shadow:0 1px 3px #9c9c9c inset;
+	-moz-box-shadow:0 1px 3px #9c9c9c inset;
+	border: none;
+}
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+/* -------------------- SOCIAL MEDIA ICONS ---------------------*/
+a.social {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../img/sprite2.png) no-repeat 0 0;
+}
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+a.social.facebook 	{background-position: -62px 0;}
+a.social.twitter	{background-position: -124px 0;}
+a.social.linkedin 	{background-position: 0 0;}
+a.social.youtube 	{background-position: -186px 0;}
+
+a.social.facebook:hover 	{background-position: -93px 0;}
+a.social.twitter:hover		{background-position: -155px 0}
+a.social.linkedin:hover 	{background-position: -31px 0;}
+a.social.youtube:hover 		{background-position: -217px 0;}
+
+
+
+/* -------------------- PHONE CSS ---------------------*/
+@media only screen and (max-width: 480px) {
+
+body {
+    min-width: 480px;
+}
+
+.wrapper {
+	padding: 0;
+	width: 480px;
+}
+}
+
+/* -------------------- DESKTOP CSS ---------------------*/
+@media only screen and (min-width: 1220px) {
+
+body {
+    min-width: 1240px;
+}
+
+.wrapper {
+	padding: 10px;
+	width: 1220px;
+}
+
 }
